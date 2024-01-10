@@ -19,4 +19,3 @@
          or
 
          make install
-4. 
