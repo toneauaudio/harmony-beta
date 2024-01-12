@@ -8,6 +8,7 @@
 
 from pyo import *
 import midiUtils
+import oscillators
 
 # Server Initalization
 ###########################
@@ -19,7 +20,7 @@ server = Server().boot()
 
 server.amp = 0.1    # adjusting amplitude to -40 dB
 
-signalOutput = Sine().out()
+oscillatorOutput = oscillators.whiteNoise().out() # outputs white noise from oscillators
 
 # I/O Devices
 ###########################

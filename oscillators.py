@@ -2,7 +2,8 @@
 
 from pyo import *
 
-def whiteNoise()
+def whiteNoise():
+    return Noise()
 
 
 
