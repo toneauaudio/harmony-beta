@@ -8,26 +8,21 @@
 
 from pyo import *
 import midiUtils
-
+import noise
 
 # Server Initalization
 ###########################
-# Creates and boots the server.
-# The user should send the "start" command from the GUI.
 
 server = Server().boot()
 
 # Signal Processing
 ###########################
-# Creates a sine wave player.
-# The out() method starts the processing
-# and sends the signal to the output.
 
 server.amp = 0.1    # adjusting amplitude to -40 dB
 
 signalOutput = Sine().out()
 
-#ch = Chorus(signalOutput).out()
+noise.noiseGen()
 
 # I/O Devices
 ###########################
@@ -37,9 +32,9 @@ midiUtils.Devices()
 # GUI Output
 ###########################
 
-sc = Scope(signalOutput)   # Displays the waveform of the chosen source
+# sc = Scope(signalOutput)   # Displays the waveform of the chosen source
 
-sp = Spectrum(signalOutput)    # Displays the spectrum contents of the chosen source
+# sp = Spectrum(signalOutput)    # Displays the spectrum contents of the chosen source
 
 server.gui(locals())     # Opens the server graphical interface.
 
