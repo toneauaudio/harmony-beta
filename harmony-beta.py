@@ -19,7 +19,7 @@ server = Server().boot()
 
 server.amp = 0.1    # adjusting amplitude to -40 dB
 
-oscillatorOutput = oscillators.bipolarPulse().out(0)
+oscillatorOutput = oscillators.bipolarPulse().out(0)    # temp audio output for debugging
 
 # I/O Devices
 ###########################
