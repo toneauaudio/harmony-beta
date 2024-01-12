@@ -10,14 +10,14 @@ from pyo import *
 
 # Creates and boots the server.
 # The user should send the "start" command from the GUI.
-s = Server().boot()
+server = Server().boot()
 # Drops the gain by 20 dB.
-s.amp = 0.1
+server.amp = 0.1
 
 # Creates a sine wave player.
 # The out() method starts the processing
 # and sends the signal to the output.
-a = Sine().out()
+signalOutput = Sine().out()
 
 # I/O Devices
 ###########################
@@ -36,9 +36,9 @@ print(outputDevices)
 # GUI Output
 ###########################
 
-sc = Scope(a)   # Displays the waveform of the chosen source
+sc = Scope(signalOutput)   # Displays the waveform of the chosen source
 
-sp = Spectrum(a)    # Displays the spectrum contents of the chosen source
+sp = Spectrum(signalOutput)    # Displays the spectrum contents of the chosen source
 
-s.gui(locals())     # Opens the server graphical interface.
+server.gui(locals())     # Opens the server graphical interface.
 
