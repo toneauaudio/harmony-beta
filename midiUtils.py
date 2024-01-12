@@ -1,6 +1,7 @@
 from pyo import *
 
 def Devices():
+
     device_count = pm_count_devices()   # recieving the count of devices
 
     if device_count < 1:    # if no devices are found
