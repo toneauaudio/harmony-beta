@@ -9,6 +9,7 @@
 from pyo import *
 import midiUtils
 
+
 # Server Initalization
 ###########################
 # Creates and boots the server.
