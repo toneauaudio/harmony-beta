@@ -1,8 +1,10 @@
-"""
-Harmony-Beta
-
-© Toneau Audio 2024
-"""
+##################################################################
+# Harmony-Beta
+#
+# Harmony-Beta is a prototype synth built in python using pyo
+#
+# © Toneau Audio 2024
+##################################################################
 
 from pyo import *
 
@@ -17,5 +19,12 @@ s.amp = 0.1
 # and sends the signal to the output.
 a = Sine().out()
 
+# Displays the waveform of the chosen source
+sc = Scope(a)
+
+# Displays the spectrum contents of the chosen source
+sp = Spectrum(a)
+
 # Opens the server graphical interface.
 s.gui(locals())
+
