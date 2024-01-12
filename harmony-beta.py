@@ -22,7 +22,11 @@ server = Server().boot()
 # The out() method starts the processing
 # and sends the signal to the output.
 
+server.amp = 0.1    # adjusting amplitude to -40 dB
+
 signalOutput = Sine().out()
+
+#ch = Chorus(signalOutput).out()
 
 # I/O Devices
 ###########################
