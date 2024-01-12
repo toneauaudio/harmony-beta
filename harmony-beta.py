@@ -9,15 +9,19 @@
 from pyo import *
 import midiUtils
 
+# Server Initalization
+###########################
 # Creates and boots the server.
 # The user should send the "start" command from the GUI.
-server = Server().boot()
-# Drops the gain by 20 dB.
-server.amp = 0.1
 
+server = Server().boot()
+
+# Signal Processing
+###########################
 # Creates a sine wave player.
 # The out() method starts the processing
 # and sends the signal to the output.
+
 signalOutput = Sine().out()
 
 # I/O Devices
