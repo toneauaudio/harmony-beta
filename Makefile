@@ -1,4 +1,5 @@
 install:
+		brew install python
 		pip install pyo
 		pip install wxPython
 
