@@ -7,8 +7,7 @@
 ##################################################################
 
 from pyo import *
-import midiUtils
-import oscillators
+from src import midiUtils, oscillators
 
 # Server Initalization
 ###########################
