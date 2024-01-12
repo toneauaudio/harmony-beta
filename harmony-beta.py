@@ -8,7 +8,6 @@
 
 from pyo import *
 import midiUtils
-import noise
 
 # Server Initalization
 ###########################
@@ -21,8 +20,6 @@ server = Server().boot()
 server.amp = 0.1    # adjusting amplitude to -40 dB
 
 signalOutput = Sine().out()
-
-noise.noiseGen()
 
 # I/O Devices
 ###########################
