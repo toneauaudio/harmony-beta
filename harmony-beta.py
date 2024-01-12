@@ -20,7 +20,7 @@ server = Server().boot()
 
 server.amp = 0.1    # adjusting amplitude to -40 dB
 
-oscillatorOutput = oscillators.whiteNoise().out() # outputs white noise from oscillators
+oscillatorOutput = oscillators.bipolarPulse().out(0)
 
 # I/O Devices
 ###########################
@@ -30,9 +30,9 @@ midiUtils.Devices()
 # GUI Output
 ###########################
 
-# sc = Scope(signalOutput)   # Displays the waveform of the chosen source
+#sc = Scope(oscillatorOutput)   # Displays the waveform of the chosen source
 
-# sp = Spectrum(signalOutput)    # Displays the spectrum contents of the chosen source
+sp = Spectrum(oscillatorOutput)    # Displays the spectrum contents of the chosen source
 
 server.gui(locals())     # Opens the server graphical interface.
 
