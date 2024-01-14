@@ -1,5 +1,7 @@
-install:
+venv:
 		python3 -m venv .venv
+
+install:
 		pip install pyo
 		pip install wxPython
 
