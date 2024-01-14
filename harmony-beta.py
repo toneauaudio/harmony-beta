@@ -7,7 +7,7 @@
 ##################################################################
 
 from pyo import *
-from src import midiUtils, oscillators
+from src import midiUtils, oscillators, filters, effects
 
 # Server Initalization
 ###########################
@@ -20,6 +20,8 @@ server = Server().boot()
 server.amp = 0.1    # adjusting amplitude to -40 dB
 
 oscillatorOutput = oscillators.bipolarPulse().out(0)    # temp audio output for debugging
+
+filterOutput = filters.lowPassFilter(oscillatorOutput, 1000).out()  # currently debugging
 
 # I/O Devices
 ###########################
