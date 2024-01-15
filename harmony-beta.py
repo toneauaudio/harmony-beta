@@ -31,9 +31,7 @@ midiUtils.Devices()
 # GUI Output
 ###########################
 
-#sc = Scope(oscillatorOutput)   # Displays the waveform of the chosen source
-
-sp = Spectrum(oscillatorOutput)    # Displays the spectrum contents of the chosen source
+gui.spectrum(oscillatorOutput)
 
 server.gui(locals())     # Opens the server graphical interface.
 
