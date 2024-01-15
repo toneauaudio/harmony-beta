@@ -4,6 +4,7 @@ venv:
 install:
 		pip install pyo
 		pip install wxPython
+		pip install osc-gen
 
 uninstall:
 		pip uninstall pyo
