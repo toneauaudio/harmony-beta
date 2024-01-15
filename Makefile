@@ -1,6 +1,9 @@
 venv:
 		python3 -m venv .venv
 
+venv-exit:
+		deactivate
+
 install:
 		pip install pyo
 		pip install wxPython
@@ -9,4 +12,3 @@ install:
 uninstall:
 		pip uninstall pyo
 		pip uninstall wxPython
-		deactivate
