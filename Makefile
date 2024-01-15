@@ -12,3 +12,4 @@ install:
 uninstall:
 		pip uninstall pyo
 		pip uninstall wxPython
+		pip uninstall osc-gen
