@@ -6,9 +6,9 @@ from pyo import *
 ###########################
 
 def scope():
-    sc = Scope()   # Displays the waveform of the chosen source
+    sc = Scope(input, length=0.05, gain=0.67, function=None, wintitle="Scope")   # Displays the waveform of the chosen source
     return sc
 
 def spectrum():
-    sp = Spectrum(oscillatorOutput)    # Displays the spectrum contents of the chosen source
+    sp = Spectrum(input, size=1024, wintype=2, function=None, wintitle="Spectrum")    # Displays the spectrum contents of the chosen source
     return sp
